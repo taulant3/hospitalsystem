@@ -1,0 +1,29 @@
+{
+  "Routes": [
+    //Get all Doktor and add Doktor
+    {
+      "DownstreamPathTemplate": "/api/Doktor",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54240
+        }
+      ],
+      "UpstreamPathTemplate": "/Doktor",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Doktor/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 54240
+        }
+      ],
+      "UpstreamPathTemplate": "/Doktor/{id}",
+      "UpstreamHttpMethod": [ "Get", "Put", "Delete" ]
+    }
+  ]
+}
